@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreatProductRequest;
+use App\Http\Requests\EditProductRequest;
 use App\Http\Services\ProductService;
 use App\Product;
 use Illuminate\Http\Request;
@@ -41,7 +43,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatProductRequest $request)
     {
         $this->productService->create($request);
         return redirect()->route('products.index')->with('success', 'Product Saved');
@@ -84,7 +86,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditProductRequest $request, $id)
     {
         $this->productService->update($request, $id);
         return redirect(route('products.index'))->with('success', 'Product Updated');
