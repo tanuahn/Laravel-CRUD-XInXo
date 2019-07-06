@@ -21,7 +21,7 @@
                 <td>{{$product->producer}}</td>
                 <td>{{$product->price}}</td>
                 <td>{{$product->quantity}}</td>
-                <td><textarea name="" id="" cols="30" rows="5">{{$product->description}}</textarea></td>
+                <td><textarea name="" id="" cols="50" rows="5">{{$product->description}}</textarea></td>
             </tr>
             </tbody>
         </table>
