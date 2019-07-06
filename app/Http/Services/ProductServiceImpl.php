@@ -28,7 +28,7 @@ class ProductServiceImpl implements ProductService
         $product = $this->productRepository->findById($id);
         return $product;
     }
-//
+
     public function create($request)
     {
         $product = new Product();
@@ -40,7 +40,7 @@ class ProductServiceImpl implements ProductService
         $this->productRepository->create($product);
 
     }
-//
+
     public function update($request, $id)
     {
         $oldProduct = $this->productRepository->findById($id);
@@ -51,7 +51,7 @@ class ProductServiceImpl implements ProductService
         $oldProduct->description = $request->description;
         $this->productRepository->update($oldProduct);
     }
-//
+
     public function destroy($id)
     {
         $product = $this->productRepository->findById($id);

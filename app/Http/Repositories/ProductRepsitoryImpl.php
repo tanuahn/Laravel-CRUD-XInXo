@@ -45,10 +45,9 @@ class ProductRepsitoryImpl implements ProductRepository
 
     public function update($data)
     {
-        $data->update();
         return $data->save();
     }
-//
+
     public function destroy($object)
     {
         $object->delete();
